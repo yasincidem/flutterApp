@@ -5,20 +5,15 @@ import 'string.dart';
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      showPerformanceOverlay: true,
+      // showPerformanceOverlay: true,
       title: Strings.appTitle,
       theme: new ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: new ListWidget(title: Strings.developer),
+      home: new ListWidget(title: 'First Page'),
     );
   }
 }
-
-
-
-
