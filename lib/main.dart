@@ -1,19 +1,26 @@
 import 'package:flutter/material.dart';
 import './widgets/ListWidget.dart';
 import 'string.dart';
+import 'package:flutter/rendering.dart';
 
-void main() => runApp(new MyApp());
+void main() {
+  debugPaintSizeEnabled=false;
+  debugPaintPointersEnabled = true;
+  debugPaintLayerBordersEnabled = true;
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
+      
       // showPerformanceOverlay: true,
       title: Strings.appTitle,
-      theme: new ThemeData(
+      theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: new ListWidget(title: 'First Page'),
+      home: ListWidget(title: 'First Page'),
     );
   }
 }
